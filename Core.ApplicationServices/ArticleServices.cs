@@ -43,7 +43,7 @@ namespace Core.ApplicationServices
             return Result.Ok();
         }
 
-        public async Task<bool> Exist(long id, CancellationToken cancellationToken=default(CancellationToken))
+        public async Task<bool> ExistAsync(long id, CancellationToken cancellationToken=default(CancellationToken))
         {
             return await unitOfWork.ArticleRepository.ExistAsync(cancellationToken, id);
         }

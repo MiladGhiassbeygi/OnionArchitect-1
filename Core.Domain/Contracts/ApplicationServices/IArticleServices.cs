@@ -10,7 +10,7 @@ namespace Core.Domain.Contracts.ApplicationServices
 {
     public interface IArticleServices
     {
-         Task<bool> Exist(long id, CancellationToken cancellationToken=default(CancellationToken));
+         Task<bool> ExistAsync(long id, CancellationToken cancellationToken=default(CancellationToken));
          Task<Article> FindAsync(long id,CancellationToken cancellationToken=default(CancellationToken));
          Task<PagedList<Article>> GetPublishedArticlesAsync(int pageNumber=1,int pageSize=int.MaxValue,CancellationToken cancellationToken = default(CancellationToken));
          Task<Result> RegisterArticlesAsync(Article article, CancellationToken cancellationToken=default(CancellationToken));
